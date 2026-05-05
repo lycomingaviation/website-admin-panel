@@ -1,0 +1,104 @@
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    min-width: 250px;
+    background-color: #f8f9fa; /* Light background */
+    border-right: 1px solid #d9d9d9;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Logo styling */
+  .logo {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .logo-img {
+    width: 140px; /* Adjust based on your logo size */
+    height: auto;
+  }
+  
+  /* Content wrapper for menu and footer */
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 60px); /* Adjust for logo height (padding + img height) */
+  }
+  
+  /* Menu styling */
+  .sidebar-menu {
+    flex-grow: 1; /* Allows menu to take remaining space */
+    background: transparent !important;
+    border-right: none !important;
+    overflow-y: auto; /* Scroll if menu items exceed height */
+  }
+  
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    color: #333 !important;
+  }
+  
+  .ant-menu-item:hover,
+  .ant-menu-submenu-title:hover {
+    color: #1890ff !important;
+  }
+  
+  .ant-menu-item-selected {
+    background-color: #e6f7ff !important;
+    color: #1890ff !important;
+  }
+  
+  /* Footer (User info and logout button) */
+  .sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid #e8e8e8;
+    background-color: #f8f9fa; /* Match sidebar background */
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-name {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .user-email {
+    display: block;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Logout button */
+  .logout-btn {
+    background-color: #1890ff !important; /* Ant Design primary color */
+    border: none !important;
+    border-radius: 6px !important;
+    width: 100%;
+    color: #fff !important;
+  }
+  
+  .logout-btn:hover {
+    background-color: #40a9ff !important;
+  }
+  
+  /* Drawer-specific adjustments (for mobile) */
+  .ant-drawer-body .sidebar-content {
+    height: 100%; /* Full height of drawer */
+  }

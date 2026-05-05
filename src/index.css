@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  font-family: 'Bookman Old Style' !important;
+}
+
+.logo {
+  font-size: 20px;
+  text-align: center;
+}
+
+.trigger {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.ant-layout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px !important;
+  background: #fff !important;
+  border-bottom: 1px solid #d9d9d9;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  --secondary-color: #8071AA;
+   --primary-color: #8071AA;
+  --sidebar-selected-bg: var(--primary-color);
+  --sidebar-selected-text: #ffffff;
+  --primary-color-rgba: rgb(150, 113, 165);
+}
+
+
+.btn-color {
+  background-color: var(--primary-color) !important;
+}
+
+.text-color {
+  color: var(--primary-color) !important;
+}
+
+.ant-layout-sider {
+  background-color: #f4f4f4;
+}
+
+/* side bar styles  start */
+
+.ant-menu-item-selected {
+  background-color: var(--sidebar-selected-bg) !important;
+  color: var(--sidebar-selected-text) !important;
+  border-right: #f4f4f4 !important;
+}
+
+.ant-menu-item:hover {
+  /* background-color: rgba(230, 78, 0, 0.1) !important; */
+  color: var(--sidebar-selected-text) !important;
+}
+
+.ant-menu-item-selected a {
+  color: var(--sidebar-selected-text) !important;
+}
+
+.ant-menu-item-selected a:hover {
+  color: black !important;
+}
+
+.ant-menu-item-active a {
+  color: black !important;
+}
+
+.ant-menu-item .anticon {
+  font-size: 18px;
+  color: black;
+}
+
+.ant-menu-item-selected .anticon {
+  color: var(--sidebar-selected-text);
+}
+
+.ant-menu-item:hover .anticon {
+  color: black;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+  border-right: unset !important;
+}
+
+.ant-menu {
+  padding: 0 15px !important;
+}
+
+.ant-menu-item-selected {
+  border-radius: 10px;
+}
+
+.ant-menu-item,
+.anticon {
+  transition: all 0.3s ease;
+}
+
+/* side bar styles  start */
+
+
+/* .ant-form {
+  padding-left: 15px !important;
+} */
+
+.ant-layout-sider-zero-width-trigger {
+  top: 5px !important;
+}
+
+.ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
+  background: #ffffff00;
+}
+
+/* Apply orange background to the table header */
+.ant-table-thead>tr>th {
+  background-color: var(--primary-color-rgba) !important;
+  font-weight: 600 !important;
+  /* font-size: 14px; */
+}
+
+/* Apply to all Ant Design input types */
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input-password,
+.ant-input-search,
+.ant-picker,
+/* Date Picker */
+.ant-picker-input,
+.ant-select-selector,
+/* Select dropdown */
+.ant-input-number,
+/* Number Input */
+.ant-input-number-input,
+/* Number Input field */
+textarea.ant-input {
+  /* Textarea */
+  border-radius: 6px !important;
+}
+
+/* Apply border-radius to the RangePicker dropdown */
+.ant-picker-dropdown {
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+
+/* Apply border-radius to the calendar panels */
+.ant-picker-panel-container {
+  border-radius: 6px !important;
+  overflow: hidden;
+}
+
+/* Apply border-radius to the date cells */
+.ant-picker-cell-inner {
+  border-radius: 6px !important;
+}
+
+.ant-table-wrapper .ant-table-container table>thead>tr:first-child>*:first-child {
+  border-start-start-radius: 8px;
+}
+
+.ant-table-wrapper .ant-table-container table>thead>tr:first-child>*:last-child {
+  border-start-end-radius: 8px;
+}
+
+
+/* Ensure fixed columns have a solid background and proper layering */
+.ant-table-tbody .ant-table-cell-fix-left,
+.ant-table-thead .ant-table-cell-fix-left {
+  background-color: #fff !important;
+}
+
+.total-row td {
+  border-top: 2px solid black !important;
+}
+
+.ant-table-row.ant-table-row-level-0 {
+  font-weight: 500;
+}
+
+.watermark {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.watermark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./assets/sitelogo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  /* Adjust opacity as needed */
+  pointer-events: none;
+  /* Ensure the watermark doesn't interfere with interactions */
+  transform: rotate(-45deg);
+  /* Rotate the logo to create a cross effect */
+
+}
+
+.ant-picker-dropdown {
+  position: absolute !important;
+}
+
+.pdf-hidden-section p {
+  margin-bottom: 0.3em !important;
+}
+
+@media print {
+  table {
+    border-collapse: collapse;
+    /* Ensure borders don't have gaps */
+    width: 100%;
+    /* Ensure the table width fits the page */
+  }
+
+  table th,
+  table td {
+    border: 1px solid black;
+    /* Define border for cells */
+  }
+}
